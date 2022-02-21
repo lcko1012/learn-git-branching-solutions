@@ -1,1 +1,1 @@
-# learn-git-branching-solutions
+Tool for practicing git:  https://learngitbranching.js.org/
