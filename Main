@@ -1,0 +1,75 @@
+
+
+### 4. A Mixed Bag
+
+4.1 Grabbing Just 1 Commit
+
+git checkout main
+git cherry-pick bugFix
+
+4.2 Juggling Commits 
+
+git rebase -i caption~2
+
+// drag C3 to top
+
+git commit --amend
+
+git rebase -i caption~2
+
+git branch -f main caption
+
+4.3 Juggling Commits #2
+
+git checkout main
+
+git cherry-pick newImage
+
+git commit --amend
+
+git cherry-pick caption
+
+4.4 Git Tags
+
+git tag v0 C1
+
+git tag v1 C2
+
+git checkout C2
+
+4.5 Git Describe
+
+git commit
+
+### 5. Advanced Topics
+
+5.1 Rebasing over 9000 times
+
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git branch -f main another
+
+5.2 Multiple parents
+
+git branch bugWork C2
+
+or
+
+git branch bugWork main~^2~
+
+5.3 Branch Spaghetti
+
+git checkout one
+
+git cherry-pick C4 C3 C2
+
+git checkout two
+
+git cherry-pick C5 C4 C3 C2
+
+git branch -f three C2
+
+
+
+
